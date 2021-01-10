@@ -1,24 +1,20 @@
-- name: Pricing
-  link: /pricing/
+- name: Gallery
+  link: /gallery/
   new_window: false
   highlight: false
-- name: Blog
-  link: /blog/
+- name: Support
+  link: /support/
   new_window: false
   highlight: false
-- name: About
-  link: /about/
-  new_window: false
-  highlight: false
-- name: Contact
-  link: /contact/
-  new_window: false
-  highlight: false
-- name: Login
-  link: /
+- name: Guides
+  link: https://github.com/utmapp/UTM/wiki
   new_window: true
   highlight: false
-- name: Sign Up
-  link: /
+- name: Changes
+  link: https://github.com/utmapp/UTM/releases
+  new_window: true
+  highlight: false
+- name: Download
+  link: https://github.com/utmapp/UTM/releases/latest/download/UTM.dmg
   new_window: true
   highlight: true

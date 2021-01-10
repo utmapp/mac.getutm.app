@@ -1,39 +1,33 @@
 - links:
-  - name: Pricing
-    link: /pricing/
-  - name: Blog
-    link: /blog/
-  - name: About
-    link: /about/
-  - name: Contact
-    link: /contact/
-- links:
-  - name: Login
-    link: /
+  - name: Gallery
+    link: /gallery/
+  - name: Support
+    link: /support/
+  - name: Guides
+    link: https://github.com/utmapp/UTM/wiki
     new_window: true
-  - name: Sign Up
-    link: /
-    new_window: true
-  - name: Docs
-    link: /
-    new_window: true
-  - name: Status
-    link: /
+  - name: Changes
+    link: https://github.com/utmapp/UTM/releases
     new_window: true
 - links:
-  - name: Facebook
-    link: https://facebook.com/cloudcannon/
-    new_window: true
-    social_icon: Facebook
+  - name: Licenses
+    link: /licenses/
+  - name: Privacy
+    link: /privacy/
+- links:
   - name: Twitter
-    link: https://twitter.com/cloudcannon/
-    social_icon: Twitter
+    link: https://twitter.com/UTMapp
+    new_window: true
+    social_icon: twitter
+  - name: Github
+    link: https://github.com/utmapp
+    new_window: true
+    social_icon: github
+  - name: Discord
+    link: https://github.com/utmapp
+    social_icon: discord
     new_window: true
   - name: YouTube
-    link: https://youtube.com/cloudcannon/
-    social_icon: YouTube
+    link: https://www.youtube.com/channel/UCAxyxZ_OLu817FzQnfyLgoQ
+    social_icon: youtube
     new_window: true
-  - name: RSS
-    link: /feed.xml
-    social_icon: RSS
-    new_window: false
