@@ -1,0 +1,40 @@
+---
+title: Gallery
+layout: default
+questions:
+    - question: What do I download?
+      answer: For the best performance, we recommend the Debian images. ARM64 images are recommended for Apple Silicon and iOS devices. x64 images are recommended for Intel Macs but can also run on Apple Silicon and iOS at reduced speeds.
+    - question: How do I use these?
+      answer: Download the archive and extract it, then open the extracted `.utm` file. If you are on iOS, you can AirDrop the `.utm` file or download a third party decompression app and open the output from the Files app.
+    - question: How do I change the RAM size?
+      answer: Depending on your device, you may need to change the amount of RAM to use the VM. For macOS, you should allocate at least 50% of installed RAM for maximum performance. For iOS, you should use around 20% of the device RAM (any more and iOS will terminate UTM). To set the RAM size, open the VM settings and browse to System.
+    - question: Where is Android?
+      answer: We removed the Android pre-built images because Android does not run well on QEMU/UTM and created a lot of confusion. Advanced users can build their own Android VM from scratch but it is not recommended.
+---
+<div class="content">
+    <section class="gallery">
+        {% for vm in site.virtual_machines %}
+        <div class="gallery-item">
+            <a href="{{ vm.url | absolute_url }}">
+                <h3>{{ vm.title }}</h3>
+                <h4><i class="fas fa-microchip"></i> {{ vm.architecture }}</h4>
+                {% if vm.screenshot %}
+                <img src="{{ site.baseurl }}/images/screens/{{ vm.screenshot }}" alt="Screenshot" class="screenshot" />
+                {% else %}
+                <div class="placeholder screenshot"></div>
+                {% endif %}
+            </a>
+        </div>
+        {% endfor %}
+    </section>
+    <section class="questions">
+        {% for question in page.questions %}
+        <div class="container flex">
+            <div class="text">
+                <h2>{{ question.question }}</h2>
+                <p>{{ question.answer | markdownify }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+</div>

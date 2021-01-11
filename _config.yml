@@ -25,8 +25,9 @@ social:
 timezone: Etc/UTC
 
 collections:
-  staff_members:
-    _hide_content: true
+  virtual_machines:
+    output: true
+    permalink: /gallery/:name
 
 paginate: 10
 paginate_path: "/blog/:num/"
@@ -46,18 +47,14 @@ defaults:
   -
     scope:
       path: ""
+      type: "virtual_machines"
+    values:
+      layout: "virtual_machine"
+  -
+    scope:
+      path: ""
     values:
       layout: "page"
-  -
-    scope:
-      path: "index.html"
-    values:
-      layout: "default"
-  -
-    scope:
-      path: "contact.html"
-    values:
-      full_width: true
 
 jekyll-archives:
   enabled:

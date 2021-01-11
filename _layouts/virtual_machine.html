@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<div class="content">
+	<section class="gallery">
+		<div class="container flex">
+			<div class="text editable">
+				<h2>{{ page.title }}</h2>
+				<ul class="fa-ul">
+					<li><span class="fa-li"><i class="fas fa-microchip"></i></span>Architecture: {{ page.architecture }}</li>
+					<li><span class="fa-li"><i class="fas fa-memory"></i></span>Memory: {{ page.memory }}</li>
+					<li><span class="fa-li"><i class="fas fa-hdd"></i></span>Disk: {{ page.disk }}</li>
+					<li><span class="fa-li"><i class="fas fa-desktop"></i></span>Display: {{ page.display }}</li>
+					<li><span class="fa-li"><i class="fas fa-screwdriver"></i></span>SPICE tools: {% if page.spice_installed %}Installed{% else %}Not Installed{% endif %}</li>
+					{% if page.username %}<li><span class="fa-li"><i class="fas fa-user"></i></span>Username: <code>{{ page.username }}</code></li>{% endif %}
+					{% if page.password %}<li><span class="fa-li"><i class="fas fa-key"></i></span>Password: <code>{{ page.password }}</code></li>{% endif %}
+				</ul>
+                {% if page.download %}
+                <div class="button">
+                    <a href="{{ page.download }}">Download</a>
+                </div>
+                {% endif %}
+			</div>
+			<div class="image">
+                {% if page.screenshot %}
+                <img src="{{ site.baseurl }}/images/screens/{{ page.screenshot }}" alt="Screenshot" class="screenshot" />
+                {% else %}
+                <div class="placeholder screenshot"></div>
+                {% endif %}
+			</div>
+		</div>
+	</section>
+
+    <section class="page">
+        <div class="container">
+            {{ content }}
+        </div>
+    </section>
+</div>
