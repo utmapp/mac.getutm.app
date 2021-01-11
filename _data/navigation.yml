@@ -6,10 +6,6 @@
   link: /support/
   new_window: false
   highlight: false
-- name: Guides
-  link: https://github.com/utmapp/UTM/wiki
-  new_window: true
-  highlight: false
 - name: Changes
   link: https://github.com/utmapp/UTM/releases
   new_window: true

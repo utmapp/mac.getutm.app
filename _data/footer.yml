@@ -3,9 +3,6 @@
     link: /gallery/
   - name: Support
     link: /support/
-  - name: Guides
-    link: https://github.com/utmapp/UTM/wiki
-    new_window: true
   - name: Changes
     link: https://github.com/utmapp/UTM/releases
     new_window: true
