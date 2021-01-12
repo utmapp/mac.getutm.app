@@ -45,10 +45,20 @@ h3 {
 }
 
 
-p, address, li {
+p, address {
 	font-size: 1.38em;
 	color: #666;
 	margin-bottom: 20px;
 	font-weight: 300;
 	line-height: 1.4em;
+}
+
+.page p {
+	font-size: 1.2em;
+}
+
+li {
+	font-size: 1.2em;
+	color: #666;
+	font-weight: 300;
 }
