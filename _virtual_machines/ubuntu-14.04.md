@@ -8,5 +8,5 @@ spice_installed: true
 username: ubuntu
 password: ubuntu
 screenshot: ubuntu-14.04-x64.png
-download: 
+download: https://github.com/utmapp/vm-downloads/releases/download/ubuntu-14.04/ubuntu-14.04-x64-utm.zip
 ---

@@ -4,6 +4,7 @@ title: Licenses
 ---
 
 * TOC
+{:class="toc"}
 {:toc}
 
 ## LGPL v2.1

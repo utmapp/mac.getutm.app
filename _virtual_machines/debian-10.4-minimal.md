@@ -8,7 +8,7 @@ spice_installed: true
 username: debian
 password: debian
 screenshot: debian-10.4-arm64.png
-download: 
+download: https://github.com/utmapp/vm-downloads/releases/download/debian-10.4/debian-10.4-arm64-utm.zip
 ---
 ## Notes
 * Root account username/password is `root`/`password`. You should change this.

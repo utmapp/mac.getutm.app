@@ -8,5 +8,5 @@ spice_installed: false
 username: root
 password: root
 screenshot: archlinux-logo.png
-download: 
+download: https://github.com/utmapp/vm-downloads/releases/download/archlinux-arm64/archlinux-arm64-utm.zip
 ---
