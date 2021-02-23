@@ -7,6 +7,8 @@
     link: https://github.com/utmapp/UTM/releases
     new_window: true
 - links:
+  - name: Guide
+    link: /guide/
   - name: Licenses
     link: /licenses/
   - name: Privacy
