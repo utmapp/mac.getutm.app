@@ -51,7 +51,7 @@ This guide is designed to only work with Apple Silicon Macs.
 ![Step 6](/images/guides//ubuntu_screen_6.png)
 
 {:start="7"}
-7. Start the VM and choose to install Ubuntu server. Follow the installation wizard, all the default options are recommended.
+7. Start the VM and choose to install Ubuntu server. (If you cannot boot to the installer, go to the troubleshooting section at the bottom.) Follow the installation wizard, all the default options are recommended.
 
 ![Step 7](/images/guides//ubuntu_screen_7.png)
 
@@ -81,3 +81,14 @@ $ sudo apt install spice-vdagent spice-webdavd
 ```
 
 Your shared directory shows up as a WebDAV server on `http://127.0.0.1:9843/`. You can use a WebDAV client to access it, or `mount.davfs` to mount it.
+
+## Troubleshooting
+
+### Cannot boot into installer
+
+If you start the VM and are stuck at the EFI screen (`BdsDxe: failed to load Boot0001` or `UEFI Interactive Shell`), try the following in order.
+
+1. Make sure you have the installer ISO selected. Click the disk icon on the toolbar and check that there is a menu option for `CD/DVD (ISO) Image (usb): ubuntu-xxx.iso`. If it says `CD/DVD (ISO) Image (usb): none`, then highlight that menu and choose `Change` and then select the ISO. If you don't have any selectable menu option, follow the guide again and make sure you have added a removable drive. Then restart the VM.
+2. Next, try to get into the EFI Shell. If you see `UEFI Interactive Shell` then you are already in the shell. Otherwise, restart the VM and quickly press the Esc key to enter the shell.
+3. In the EFI shell make sure you see `FS0: Alias(s):CD0h0a0a::BLK1:` near the top or something similar. If not, then double check your configuration and make sure you have a removable drive configured and the installer ISO mounted. Also check that your ISO is valid.
+4. Type in: `fs0:\efi\boot\bootaa64.efi` and you should see GRUB. Then select `Ubuntu Server` to continue with the install.
