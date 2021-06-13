@@ -98,7 +98,7 @@ Once booted, with the SPICE guest tools installed, the shared directory should s
 
 ### System drive gets corrupted
 
-Do to an issue with QEMU handling of VHDX images, sometimes Windows will be corrupted from normal usage. This would result in BSOD or random application crashes/errors. To work around this issue, it is recommended that you convert the VHDX image to a QCOW2 image. Currently, UTM does not provide this functionality in the UI so you have to do it directly from QEMU.
+Due to an issue with QEMU handling of VHDX images, sometimes Windows will be corrupted from normal usage. This would result in BSOD or random application crashes/errors. To work around this issue, it is recommended that you convert the VHDX image to a QCOW2 image. Currently, UTM does not provide this functionality in the UI so you have to do it directly from QEMU.
 
 1. Install [Homebrew](https://brew.sh) if you do not have it already.
 2. Run `brew install qemu`
