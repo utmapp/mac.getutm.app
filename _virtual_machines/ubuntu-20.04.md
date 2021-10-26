@@ -92,3 +92,11 @@ If you start the VM and are stuck at the EFI screen (`BdsDxe: failed to load Boo
 2. Next, try to get into the EFI Shell. If you see `UEFI Interactive Shell` then you are already in the shell. Otherwise, restart the VM and quickly press the Esc key to enter the shell.
 3. In the EFI shell make sure you see `FS0: Alias(s):CD0h0a0a::BLK1:` near the top or something similar. If not, then double check your configuration and make sure you have a removable drive configured and the installer ISO mounted. Also check that your ISO is valid.
 4. Type in: `fs0:\efi\boot\bootaa64.efi` and you should see GRUB. Then select `Ubuntu Server` to continue with the install.
+
+### Networking is unavailable after switching between Console Only and Full Graphics modes
+
+When switching between display modes, the network adapter may be renamed by Ubuntu. To fix this, you need to set up networking again.
+
+1. Run `ip link show` and look at the last adapter name. For example, it may be listed as `enp0s9`.
+2. Edit `/etc/netplan/00-installer-config.yaml` and copy your configuration for `enp0s8` (or whatever the old adapter was named) and paste it immediately after for `enp0s9` (or whatever the new adapter is named).
+3. Reboot and you should be able to use networking in both display modes.
