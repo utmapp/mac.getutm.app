@@ -1,5 +1,5 @@
 ---
-title: Windows 10
+title: Windows 11
 architecture: ARM64
 memory: 8 GiB
 disk: 20 GiB
@@ -7,7 +7,7 @@ display: VGA
 spice_installed: true
 username:
 password:
-screenshot: windows-10-arm64.png
+screenshot: windows-11.png
 download: 
 ---
 
@@ -15,9 +15,9 @@ This guide is designed to only work with Apple Silicon Macs.
 
 ## Downloads
 
-* [UTM for Mac](https://github.com/utmapp/UTM/releases) (v2.0.15 or higher)
-* [Windows for ARM](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewARM64) (build 20231 or higher)
-* [SPICE Guest Tools]({% link support.md %}) (v0.164 or higher)
+* [UTM for Mac](https://github.com/utmapp/UTM/releases)
+* [Windows for ARM](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewARM64)
+* [SPICE Guest Tools]({% link support.md %})
 
 ## Instructions
 
@@ -102,5 +102,5 @@ Do to an issue with QEMU handling of VHDX images, sometimes Windows will be corr
 
 1. Install [Homebrew](https://brew.sh) if you do not have it already.
 2. Run `brew install qemu`
-3. Run `qemu-img convert -p -O qcow2 /path/to/Windows10_InsiderPreview_Client_ARM64_en-us_21286.VHDX /path/to/output/Windows10_InsiderPreview_Client_ARM64_en-us_21286.qcow2` replacing the paths with your own.
+3. Run `qemu-img convert -p -O qcow2 /path/to/Windows11_InsiderPreview_Client_ARM64_en-us_22483.VHDX /path/to/output/Windows11_InsiderPreview_Client_ARM64_en-us_22483.qcow2` replacing the paths with your own.
 4. Use the QCOW2 image with UTM. It is recommended you do this with a fresh VHDX from Microsoft in case your image was already corrupted.
