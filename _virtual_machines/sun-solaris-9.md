@@ -9,4 +9,5 @@ username: root
 password: 
 screenshot: sun-solaris-9-sparc.png
 download: https://github.com/utmapp/vm-downloads/releases/download/sun-solaris-9/sun-solaris-9-utm.zip
+utm_link: true
 ---

@@ -9,4 +9,5 @@ username:
 password: 
 screenshot: mac-os-9.2.1-ppc.png
 download: https://github.com/utmapp/vm-downloads/releases/download/mac-os-9.2.1/mac-os-9.2.1-utm.zip
+utm_link: true
 ---

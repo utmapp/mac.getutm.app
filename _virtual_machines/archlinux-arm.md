@@ -9,4 +9,5 @@ username: root
 password: root
 screenshot: archlinux-logo.png
 download: https://github.com/utmapp/vm-downloads/releases/download/archlinux-arm64/archlinux-arm64-utm.zip
+utm_link: true
 ---

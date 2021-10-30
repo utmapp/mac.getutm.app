@@ -19,6 +19,11 @@ layout: default
                 <div class="button">
                     <a href="{{ page.download }}">Download</a>
                 </div>
+                {% if page.utm_link %}
+                <div class="button">
+                    <a href="utm://downloadVM?url={{ page.download }}">Open in UTM</a>
+                </div>
+                {% endif %}
                 {% endif %}
 			</div>
 			<div class="image">
