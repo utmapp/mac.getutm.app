@@ -21,7 +21,7 @@ This guide will help you create an Windows 10 or Windows 11 virtual machine from
 
 ## Instructions
 
-These instructions are for those who are already familiar with the UTM interface. If you are a new user, we recommend reading [the Windows 11 ARM64 guide]({% link windows-11-arm.md %}) for extra details.
+These instructions are for those who are already familiar with the UTM interface. If you are a new user, we recommend reading [the Windows 11 ARM64 guide]({% link _virtual_machines/windows-11-arm.md %}) for extra details.
 
 1. Find the edition of Windows you want to install on [UUP dump](https://uupdump.net). Once you downloaded and extracted the installer creator, you need to run `uup_download_macos.sh` to generate the ISO.
 2. In UTM, create a new VM for either the x86_64 or ARM64 architecture (under System) depending on the version of Windows you downloaded. Select at least 8 GiB of RAM.
