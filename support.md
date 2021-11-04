@@ -23,4 +23,4 @@ $ sudo apt install spice-vdagent spice-webdavd
 
 [1]: https://discord.gg/UV2RUgD
 [2]: https://github.com/utmapp/UTM/issues
-[3]: https://github.com/utmapp/qemu/releases/download/v5.2.0-asi/spice-guest-tools-0.164.iso
+[3]: https://github.com/utmapp/qemu/releases/download/v6.1.0-utm/spice-guest-tools-0.164.2.iso
