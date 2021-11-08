@@ -11,6 +11,8 @@ If you found a bug or crash, please report it to [Github][2] after searching to 
 
 ### SPICE Guest Tools and QEMU Drivers (Windows)
 
+**Update (07/11/2021):** There's been issues reported from updating SPICE tools from 0.164 to 0.164.2. Please back up your VM before updating. If you get a black screen after boot, change the UTM display device to `ramfb`, boot into Windows, delete the graphics drivers, shut down, restore the UTM display device, and boot back to Windows, and re-install the drivers.
+
 [Download][3]
 
 ### SPICE Guest Tools (Ubuntu)
