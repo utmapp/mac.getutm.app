@@ -8,7 +8,7 @@ questions:
     - question: How do I contribute?
       answer: You can find UTM on [Github](https://github.com/utmapp/UTM). You can also contribute to the [QEMU project](https://www.qemu.org/contribute/).
     - question: Can I run games?
-      answer: No, probably not. UTM does not currently support GPU emulation/virtualization and therefore lacks support for 3D acceleration (e.g. OpenGL and DirectX). You may be able to run older games with software rendering options, but nothing with hardware acceleration.
+      answer: No, probably not. UTM does not currently support GPU emulation/virtualization on Windows and therefore lacks support for 3D acceleration (e.g. OpenGL and DirectX). You may be able to run older games with software rendering options, but nothing with hardware acceleration. There is experimental support for hardware OpenGL acceleration on Linux through [Virgl](https://virgil3d.github.io).
 ---
 <section class="hero">
 	<div class="text-container">
@@ -31,8 +31,32 @@ questions:
 				<p>UTM employs Apple's Hypervisor virtualization framework to run ARM64 operating systems on Apple Silicon at near native speeds. On Intel Macs, x86/x64 operating system can be virtualized. In addition, lower performance emulation is available to run x86/x64 on Apple Silicon as well as ARM64 on Intel. For developers and enthusiasts, there are dozens of other emulated processors as well including: ARM32, MIPS, PPC, and RISC-V. Your Mac can now truly run anything.</p>
 			</div>
 			<div class="image">
-				<img src="{{ site.baseurl }}/images/windows10.png" alt="Screenshot" class="screenshot editable" />
-				<img src="{{ site.baseurl }}/images/ubuntu.png" alt="Screenshot" class="screenshot editable" />
+				<img src="{{ site.baseurl }}/images/windows.png" srcset="{{ site.baseurl }}/images/windows@2x.png 2x" alt="Screenshot" class="screenshot editable" />
+				<img src="{{ site.baseurl }}/images/ubuntu.png" srcset="{{ site.baseurl }}/images/ubuntu@2x.png 2x" alt="Screenshot" class="screenshot editable" />
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container flex">
+			<div class="text editable">
+				<h2><strong>Emulate</strong> classic operating systems.</h2>
+				<p>Not only can you run the latest and greatest operating systems, you can also emulate older operating systems whether it's on PowerPC, SPARC, or x86_64. Check out the <a href="{% link gallery.html %}">gallery</a> for some examples of what you can run.</p>
+			</div>
+			<div class="image">
+				<img src="{{ site.baseurl }}/images/macos9.png" srcset="{{ site.baseurl }}/images/macos9@2x.png 2x" alt="Screenshot" class="screenshot editable" />
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container flex">
+			<div class="text editable">
+				<h2><strong>Virtualize</strong> macOS as well.</h2>
+				<p>Run multiple instances of macOS on your Apple Silicon Mac with UTM. This can be useful for developers as well as security conscious users. Note that macOS VM support is limited to ARM based Macs running macOS Monterey or higher.</p>
+			</div>
+			<div class="image">
+				<img src="{{ site.baseurl }}/images/macos.png" srcset="{{ site.baseurl }}/images/macos@2x.png 2x" alt="Screenshot" class="screenshot editable" />
 			</div>
 		</div>
 	</section>
