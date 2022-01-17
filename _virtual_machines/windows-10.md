@@ -21,15 +21,17 @@ This guide will help you create an Windows 10 or Windows 11 virtual machine from
 
 ## Instructions
 
-These instructions are for those who are already familiar with the UTM interface. If you are a new user, we recommend reading [the Windows 11 ARM64 guide]({% link _virtual_machines/windows-11-arm.md %}) for extra details.
-
-1. Find the edition of Windows you want to install on [UUP dump](https://uupdump.net). Once you downloaded and extracted the installer creator, you need to run `uup_download_macos.sh` to generate the ISO.
-2. In UTM, create a new VM for either the x86_64 or ARM64 architecture (under System) depending on the version of Windows you downloaded. Select at least 8 GiB of RAM.
-4. Under Drives, create a new drive and check "Removable". On ARM64, it should default to "USB" as the interface and on x86_64, it should default to "IDE".
-3. Create another new drive with an amount of storage you need (at least 20 GiB is recommended). On ARM64, make sure to select "NVMe" as the interface. On x86_64, you can leave the default "IDE".
-5. Save the VM, and select it in the sidebar. On the bottom right, click Browse and select the Windows ISO you've created in step 1.
-6. Start the VM and follow the Windows installer.
-7. Once installation is complete, make sure to install the [SPICE Guest Tools]({% link support.md %}) for networking drivers and access to higher resolutions.
+1. Find the edition of Windows you want to install on [UUP dump](https://uupdump.net). Once you downloaded and extracted the installer creator, you need to run `uup_download_macos.sh` to generate the ISO. If you are on Apple Silicon, you need to run `uup_download_macos.sh` from a Rosetta Terminal instance.
+2. Open UTM and click the "+" button to open the VM creation wizard.
+3. Select "Virtualize".
+4. Select "Windows".
+5. Uncheck "Import VHDX Image" and you should see the text above change to "Boot ISO Image". Press "Browse" and select the ISO you built in step 1.
+6. Pick the amount of RAM and CPU cores you wish to give access to the VM. Press "Next" to continue.
+7. Specify the maximum amount of drive space to allocate. Press "Next" to continue.
+8. If you have a directory you want to mount in the VM, you can select it here. Alternatively, you can skip this and select the directory later from the VM window's toolbar. The shared directory will be available after installing SPICE tools (see below). Press "Next" to continue.
+9. Press "Save" to create the VM and press the Run button to start the VM.
+10. Follow the Windows installer. If you have issues with the mouse, press the mouse capture button in the toolbar to send mouse input directly. Press Control+Option together to exit mouse capture mode. Sometimes, due to driver issues, you can enter and exit capture mode and the mouse cursor works normally again.
+11. Once installation is complete and you've logged in, we can proceed to install the guest tools. With the ISO mounted in the D: drive, open Windows Explorer and browse to `D:\`. Run `spice-guest-tools-xxx.exe` which should install all drivers along with QEMU agent, SPICE agent (for copy/paste and dynamic resolution), and shared directory.
 
 ## Troubleshooting
 
@@ -45,3 +47,11 @@ If you get this message trying to install Windows 11, you can bypass it with the
 6. Create two new values: Choose New -> DWORD (32-bit) and create `BypassTPMCheck` and `BypassSecureBootCheck`. Set both values to 1.
 7. Close out of Registry Editor and Command Prompt.
 8. In setup, press the back button and then Next to continue installation.
+
+### Ping does not work
+
+Note that due to libslirp limitations, `ping` will not work and so Windows may think that there is still no internet connection.
+
+### Networking does not work
+
+Make sure you installed the SPICE guest tools, which includes the network drivers.
