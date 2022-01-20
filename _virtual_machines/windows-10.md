@@ -16,7 +16,8 @@ This guide will help you create an Windows 10 or Windows 11 virtual machine from
 ## Downloads
 
 * [UTM for Mac](https://github.com/utmapp/UTM/releases)
-* [UUP dump](https://uupdump.net)
+* [UUP dump (Windows 10)](https://uupdump.net/known.php?q=21390)
+* [UUP dump (Windows 11)](https://uupdump.net/known.php?q=Windows+11+co_release)
 * [SPICE Guest Tools]({% link support.md %})
 
 ## Instructions
