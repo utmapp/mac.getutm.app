@@ -5,7 +5,7 @@ title: Support
 
 If you have questions about installation, usage, configuration, or anything else, you are invited to join the community run [Discord][1]. Please read and respect the rules!
 
-If you found a bug or crash, please report it to [Github][2] after searching to make sure it has not already been reported. When submitting an issue, please fill in the template with the requested information including the version of UTM, your device configuration, and attach any crash logs.
+If you found a bug or crash, please report it to [GitHub][2] after searching to make sure it has not already been reported. When submitting an issue, please fill in the template with the requested information including the version of UTM, your device configuration, and attach any crash logs.
 
 ## Downloads
 
