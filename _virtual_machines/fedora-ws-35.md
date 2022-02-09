@@ -2,8 +2,8 @@
 title: Fedora Workstation 35
 architecture: ARM64
 memory: 4 GiB
-disk: 5 GiB
-display: VGA
+disk: 64 GiB
+display: virtio-ramfb
 spice_installed: true
 username:
 password:

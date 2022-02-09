@@ -2,8 +2,8 @@
 title: Fedora Server 35
 architecture: ARM64
 memory: 4 GiB
-disk: 2 GiB
-display: VGA
+disk: 64 GiB
+display: virtio-ramfb 
 spice_installed: true
 username:
 password:
