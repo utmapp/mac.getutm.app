@@ -31,6 +31,10 @@ This guide is designed to only work with Apple Silicon Macs.
 8. Follow the Windows installer. If you have issues with the mouse, press the mouse capture button in the toolbar to send mouse input directly. Press Control+Option together to exit mouse capture mode. Sometimes, due to driver issues, you can enter and exit capture mode and the mouse cursor works normally again.
 9. Once installation is complete and you've logged in, we can proceed to install the guest tools. With the ISO mounted in the D: drive, open Windows Explorer and browse to `D:\`. Run `spice-guest-tools-xxx.exe` which should install all drivers along with QEMU agent, SPICE agent (for copy/paste and dynamic resolution), and shared directory.
 
+### Installing the Microsoft Store and UWP apps (optional)
+
+At the time of writing, Microsoft does not provide ARM64 builds of its built-in apps so you must install the x86 version of the Store. To do this, use this [Parallels Desktop guide](https://kb.parallels.com/en/128520#section2) (under "Install Microsoft Store manually") to install the x86 version of the Microsoft Store. Then you can use it to install x86 versions of other built-in apps. You will have to uninstall the ARM32 versions if you installed them through other means.
+
 ## Troubleshooting
 
 ### Ping does not work
