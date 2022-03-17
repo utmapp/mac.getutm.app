@@ -42,7 +42,13 @@ At the time of writing, Microsoft does not provide ARM64 builds of its built-in 
 
 ### Cannot run `uup_download_macos.sh`
 
-First, make sure that `uup_download_macos.sh` is executable by running
+In Terminal, go to the directory containing `uup_download_macos.sh`
+
+```
+$ cd path/to/extracted/files
+```
+
+Make sure that `uup_download_macos.sh` is executable by running
 
 ```
 $ chmod +x uup_download_macos.sh
