@@ -97,3 +97,10 @@ Note that due to libslirp limitations, `ping` will not work and so Windows may t
 ### Networking does not work
 
 Make sure you installed the SPICE guest tools, which includes the network drivers.
+
+If Windows 11 setup is stuck due to lack of network connection:
+
+1. Press **Shift + F10** to launch Command Prompt.
+2. Type in `OOBE\BYPASSNRO` and press Enter.
+3. Your VM should reboot and at the setup screen you should see an option for "I don't have internet."
+4. Once Windows setup is completed, make sure to install the SPICE guest tools for network drivers.

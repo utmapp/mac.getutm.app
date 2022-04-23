@@ -45,14 +45,9 @@ Note that due to libslirp limitations, `ping` will not work and so Windows may t
 
 Make sure you installed the SPICE guest tools, which includes the network drivers.
 
-If, for example, installation stops because no network is found:
+If Windows 11 setup is stuck due to lack of network connection:
 
-1. Mount the guest tools ISO as VM's CD/DVD via UTM main window
-2. In Windows 11, press **Shift+F10** to open Command Prompt
-3. Type `D:` and then `spice-guest-tools-0.164.exe` (or any newer version you could have)
-4. Accept standard settings in installation wizard and, when prompted, AVOID immediate automatic reboot
-5. Exit from Command Prompt with `exit`
-6. Now the network is detected and you can go on with Windows installation
-7. Once installation is completed, before rebooting don't forget to unmount guest tools ISO
-
-For analogous missing drivers problem, it's preferable to configure host-guest shared folders only after installation and reboot (which completes the tools setup)
+1. Press **Shift + F10** to launch Command Prompt.
+2. Type in `OOBE\BYPASSNRO` and press Enter.
+3. Your VM should reboot and at the setup screen you should see an option for "I don't have internet."
+4. Once Windows setup is completed, make sure to install the SPICE guest tools for network drivers.
