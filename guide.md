@@ -63,6 +63,12 @@ If networking is unsupported by the emulated architecture, these options will be
 
 **Port Forward** lets you forward ports from the guest subnet to your local (host) machine.
 
+**If you're installing Windows 11 and you cannot get pass the "Let's connect you to a network" page, do the following**:
+
+1. Press `Shift + F10`
+2. A CMD terminal will appear where you will enter in `OOBE\BYPASSNRO`
+3. Press enter, and then your VM will restart, and then a `I don't have internet` button will appear which will allow you to bypass the internet connection requirement screen.
+
 ### Sound
 
 If sound is unsupported by the emulated architecture, these options will be disabled. **Emulated Audio Card** should be set to the recommended default and can be changed for advanced use cases.
