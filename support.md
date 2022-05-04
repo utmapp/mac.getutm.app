@@ -7,18 +7,28 @@ If you have questions about installation, usage, configuration, or anything else
 
 If you found a bug or crash, please report it to [GitHub][2] after searching to make sure it has not already been reported. When submitting an issue, please fill in the template with the requested information including the version of UTM, your device configuration, and attach any crash logs.
 
-## Downloads
+## SPICE Guest Tools
 
-### SPICE Guest Tools and QEMU Drivers (Windows)
+This section contains various optional drivers and daemons that can be installed on the guest to provide enhanced SPICE integration and performance.
+
+### Windows
 
 [Download][3]
 
-### SPICE Guest Tools (Ubuntu)
+### Ubuntu Linux
 
 Run from a terminal:
 
 ```
 $ sudo apt install spice-vdagent spice-webdavd
+```
+
+### Fedora Linux
+
+Run from a terminal:
+
+```
+$ sudo dnf install spice-vdagent spice-webdavd
 ```
 
 [1]: https://discord.gg/UV2RUgD
