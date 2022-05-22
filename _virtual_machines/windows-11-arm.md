@@ -16,15 +16,28 @@ This guide is designed to only work with Apple Silicon Macs.
 ## Downloads
 
 * [UTM for Mac](https://github.com/utmapp/UTM/releases)
-* [Windows for ARM](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewARM64)
+* [Windows for ARM ISO](https://uup.rg-adguard.net/)
 * [SPICE Guest Tools]({% link support.md %})
+
+## Generate an ISO
+
+Note: you do need a recent version of Windows 11 (recommend) or Windows 10 on x86_64 computer to generate an ISO.
+
+1. On the Windows for ARM ISO page, select following
+2. Select type: `Cumulative Update for Windws 10`
+3. Select version: `\[22000.651] 2022-04 Cumulative Update for Windows 11 for arm64-based Systems (KB5012643) \[arm64]` or another Windows 11 `arm64` build
+4. Select language: `en-us: English (United States)` or a language of your choice
+5. Select edition: `All Edition`
+6. Select type download: `Download ISO compiler in OneClick! (run downloaded CMD-file)`
+7. On the right hand column, make sure you download the `.cmd` file starting with `multi_creatingISO...`. This script allows you to remove hardware installation restriction for Windows 11.
+8. Finally, you will have ISO generated, and you can use it in UTM
 
 ## Instructions
 
 1. Open UTM and click the "+" button to open the VM creation wizard.
 2. Select "Virtualize".
 3. Select "Windows".
-4. Click "Browse" and select the Windows VHDX downloaded above. Press "Next" to continue.
+4. Click "Browse" and select the Windows ISO downloaded above. Press "Next" to continue.
 5. Pick the amount of RAM and CPU cores you wish to give access to the VM. Press "Next" to continue.
 6. If you have a directory you want to mount in the VM, you can select it here. Alternatively, you can skip this and select the directory later from the VM window's toolbar. The shared directory will be available after installing SPICE tools (see below). Press "Next" to continue.
 7. Press "Save" to create the VM and press the Run button to start the VM.
