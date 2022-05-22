@@ -30,6 +30,20 @@ This guide is designed to only work with Apple Silicon Macs.
 8. Press "Save" to create the VM and press the Run button to start the VM.
 9. Go through the Ubuntu Server installer. If the reboot fails, you can manually quit the VM, unmount the installer ISO, and start the VM again to boot into your new installation.
 
+## Use Geo-optimized mirrors
+
+The default `ports.ubuntu.com` repository mirror is a bit slow and only use http (which is insecure), hence we recommend installing Ubuntu without network connection first until we configure it to use a secure HTTPS mirror.
+
+You can use an alternative mirror by visiting this site [Official Archive Mirrors for Ubuntu](https://launchpad.net/ubuntu/+archivemirrors), search for Ports, and use an HTTPS mirror.
+
+For instance, United States users can use [Open Computing Facility at UC Berkeley (Ports)](https://mirrors.ocf.berkeley.edu/ubuntu-ports/), you can use this command line
+
+```
+
+$ sudo sed -E -i 's#http://[^\s]*ports\.ubuntu\.com/ubuntu-ports/#https://mirrors.ocf.berkeley.edu/ubuntu-ports/#g' /etc/apt/sources.list'
+
+```
+
 ## Installing Ubuntu Desktop
 
 At the end of the installation, you will have Ubuntu Server installed without any GUI. To install Ubuntu Desktop, log in and run:
@@ -40,6 +54,56 @@ $ sudo apt install ubuntu-desktop
 $ sudo reboot
 ```
 
+## Let Network Manager handle network connection (highly recommend if you install Ubuntu Desktop)
+
+When switching between display modes or changing hardware settings, the network adapter may be renamed by Ubuntu. Fortunately, Network Manager can handle such change, and once you complete these steps, you can actually manage network setting via desktop GUI's native Setting App
+
+In the terminal, go to `/etc/netplan` to see the folder content, it should contain `00-installer-config.yaml`
+```
+$ cd /etc/netplan
+$ ls -l
+
+```
+
+Disable all YAML files by changing `.yaml` to `.yaml.disabled`, such as 
+
+```
+$ sudo mv 00-installer-config.yaml 00-installer-config.yaml.disabled
+
+```
+
+Then, create a 01-network-manager-all.yaml by using 
+
+```
+$ sudo nano 01-network-manager-all.yaml
+
+```
+
+with the content of 
+
+```
+# Let NetworkManager manage all devices on this system
+network:
+  version: 2
+  renderer: NetworkManager
+
+```
+
+Use Control-X to exit `nano`, and type `y` to commit change.
+
+Finally, let's activate Network Manager Service and disable systemd network service by executing following.
+
+```
+$ sudo systemctl disable systemd-networkd
+$ sudo systemctl disable networkd-dispatcher.service
+
+$ sudo systemctl enable NetworkManager
+$ sudo reboot
+
+```
+
+This has been tested on Ubuntu 22.04
+
 ## Enable clipboard and directory sharing
 
 Install the following:
@@ -49,6 +113,7 @@ $ sudo apt install spice-vdagent spice-webdavd
 ```
 
 Your shared directory shows up as a WebDAV server on `http://127.0.0.1:9843/`. You can use a WebDAV client to access it, or `mount.davfs` to mount it.
+
 
 ## Troubleshooting
 
@@ -61,7 +126,7 @@ If you start the VM and are stuck at the EFI screen (`BdsDxe: failed to load Boo
 3. In the EFI shell make sure you see `FS0: Alias(s):CD0h0a0a::BLK1:` near the top or something similar. If not, then double check your configuration and make sure you have a removable drive configured and the installer ISO mounted. Also check that your ISO is valid.
 4. Type in: `fs0:\efi\boot\bootaa64.efi` and you should see GRUB. Then select `Ubuntu Server` to continue with the install.
 
-### Networking is unavailable
+### Networking is unavailable (DEPRECATED)
 
 When switching between display modes or changing hardware settings, the network adapter may be renamed by Ubuntu. To fix this, you need to set up networking again.
 
