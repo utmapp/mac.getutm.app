@@ -19,5 +19,4 @@ utm_link: true
 * Customized xterm theme
 * Working audio, networking, sharing features
 * In VGA mode, /media/share mounts the share directory at startup
-* Alias commands resize refreshes resolution of the display and soundon enables audio
-* Root account username/password is `root`/`password`. You should change this.
+* Alias commands `resize` refreshes resolution of the display and `soundon` enables audio
