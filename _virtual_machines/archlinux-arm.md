@@ -13,17 +13,18 @@ utm_link: true
 ---
 
 
-## Enable clipboard and directory sharing
+## Enable clipboard, directory sharing and full screen
 
 from https://wiki.archlinux.org/title/QEMU#SPICE 
+
+install the following:
 
 ```
 $ sudo pacman -S spice-vdagent xf86-video-qxl
 ```
 
-With the VM turned off, open the settings, and make sure these two options are checked.
+With the VM turned off, open the settings, and make sure Enable Clipboard Sharing and Enable Directory Sharing are checked.
 
-![Sharing](/images/guides//ubuntu_screen_sharing.png)
 
 
 
