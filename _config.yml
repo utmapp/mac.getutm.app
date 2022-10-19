@@ -66,6 +66,10 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
 
 exclude:
   - Gemfile

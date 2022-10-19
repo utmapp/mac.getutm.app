@@ -7,8 +7,8 @@
   new_window: false
   highlight: false
 - name: Changes
-  link: https://github.com/utmapp/UTM/releases
-  new_window: true
+  link: /changes/
+  new_window: false
   highlight: false
 - name: Download
   link: https://github.com/utmapp/UTM/releases/latest/download/UTM.dmg
