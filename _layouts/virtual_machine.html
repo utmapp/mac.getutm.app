@@ -25,6 +25,11 @@ layout: default
                 </div>
                 {% endif %}
                 {% endif %}
+                {% if page.guide %}
+                <div class="button">
+                    <a href="{{ page.guide }}">Guide</a>
+                </div>
+                {% endif %}
 			</div>
 			<div class="image">
                 {% if page.screenshot %}

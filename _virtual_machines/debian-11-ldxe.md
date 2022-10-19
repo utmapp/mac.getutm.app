@@ -1,16 +1,15 @@
 ---
-title: Debian 10.4 (Xfce)
+title: Debian 11 (LDXE)
 architecture: ARM64
 memory: 1024 MiB
-disk: 10 GiB
+disk: 20 GiB
 display: VGA+Console
 spice_installed: true
 username: debian
 password: debian
-screenshot: debian-10.4-xfce-arm64.png
-download: https://github.com/utmapp/vm-downloads/releases/download/debian-10.4/debian-10.4-xfce-arm64-utm.zip
+screenshot: debian-11-ldxe-arm64.png
+download: https://github.com/utmapp/vm-downloads/releases/download/debian-11.5/debian-11.5-ldxe-arm64-utm4.zip
 utm_link: true
-hidden: true
 ---
 ## Notes
 * Root account username/password is `root`/`password`. You should change this.

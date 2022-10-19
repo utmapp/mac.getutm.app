@@ -14,6 +14,7 @@ questions:
 <div class="content">
     <section class="gallery">
         {% for vm in site.virtual_machines %}
+        {% unless vm.hidden %}
         <div class="gallery-item">
             <a href="{{ vm.url }}">
                 <h3>{{ vm.title }}</h3>
@@ -25,6 +26,7 @@ questions:
                 {% endif %}
             </a>
         </div>
+        {% endunless %}
         {% endfor %}
     </section>
     <section class="questions">
