@@ -28,5 +28,5 @@ You need an Windows XP installation ISO. There are many different ones that work
 Due to the age of this operating system, Internet Explorer 6 will NOT work at loading most websites even if internet is working. You should download [Firefox 52 ESR][2], the last version to support Windows XP and use UTM's directory sharing feature to install it.
 
 
-[1]: {% link support.md %}
+[1]: https://docs.getutm.app/guest-support/windows/#download
 [2]: https://www.mozilla.org/en-US/firefox/52.9.0/system-requirements/

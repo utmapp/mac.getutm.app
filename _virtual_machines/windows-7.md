@@ -25,4 +25,4 @@ You need an Windows 7 installation ISO. There are many different ones that work 
 8. Install the SPICE tools.
 
 
-[1]: {% link support.md %}
+[1]: https://docs.getutm.app/guest-support/windows/#download
