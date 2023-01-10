@@ -1,5 +1,5 @@
 ---
-title: Debian 11 (LDXE)
+title: Debian 11 (LXDE)
 architecture: ARM64
 memory: 1024 MiB
 disk: 20 GiB
