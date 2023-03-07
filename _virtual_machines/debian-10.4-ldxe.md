@@ -1,5 +1,5 @@
 ---
-title: Debian 10.4 (LDXE)
+title: Debian 10.4 (LXDE)
 architecture: ARM64
 memory: 1024 MiB
 disk: 10 GiB
