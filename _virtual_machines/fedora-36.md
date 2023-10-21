@@ -9,4 +9,5 @@ username:
 password:
 screenshot: fedora-36-arm64.png
 guide: https://docs.getutm.app/guides/fedora/
+hidden: true
 ---
