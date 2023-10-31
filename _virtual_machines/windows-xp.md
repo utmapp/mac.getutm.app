@@ -25,8 +25,8 @@ You need an Windows XP installation ISO. There are many different ones that work
 8. Install the SPICE tools.
 
 ## Notes
-Due to the age of this operating system, Internet Explorer 6 will NOT work at loading most websites even if internet is working. You should download [Firefox 52 ESR][2], the last version to support Windows XP and use UTM's directory sharing feature to install it.
+Due to the age of this operating system, Internet Explorer 6 will NOT work at loading most websites even if internet is working. You should download [Mypal][2]. It's still updated and somewhat functional. You can also install this browser directly from Internet Explorer by visiting mypal-browser.org.
 
 
 [1]: https://docs.getutm.app/guest-support/windows/#download
-[2]: https://www.mozilla.org/en-US/firefox/52.9.0/system-requirements/
+[2]: https://www.mypal-browser.org/release/mypal-68.13.1.en-US.win32.zip
