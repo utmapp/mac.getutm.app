@@ -12,7 +12,7 @@ download: https://github.com/utmapp/vm-downloads/releases/download/windows-templ
 ---
 
 ## Requirements
-You need an Windows XP installation ISO. There are many different ones that work but a good working image for English users is named `en_windows_xp_professional_sp3_Nov_2013_Incl_SATA_Drivers.iso` and has the SHA1 hash of `6947e45f7eb50c873043af4713aa7cd43027efa7`.
+You need a Windows XP installation ISO. There are many different ones that work but a good working image for English users is named `en_windows_xp_professional_sp3_Nov_2013_Incl_SATA_Drivers.iso` and has the SHA1 hash of `6947e45f7eb50c873043af4713aa7cd43027efa7`.
 
 ## Installation
 1. Open the downloaded template `.utm` and select "Windows XP" in UTM.
