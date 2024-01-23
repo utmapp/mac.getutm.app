@@ -1,5 +1,5 @@
 ---
-title: Ubuntu 20.04
+title: Ubuntu 22.04
 architecture: ARM64
 memory: 4 GiB
 disk: 64 GiB
