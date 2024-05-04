@@ -26,7 +26,7 @@ You need an Windows XP installation ISO. There are many different ones that work
 
 ## Notes
 * Due to the age of this operating system, Internet Explorer 6 will NOT work at loading most websites even if internet is working. You should download [Firefox 52 ESR][2], the last version to support Windows XP and use UTM's directory sharing feature to install it.
-* Installation of SPICE tools require 32-bit version of Windows XP and will not work on Windows XP 64-bit [3].
+* Installation of SPICE tools require 32-bit version of Windows XP and will not work on Windows XP 64-bit ([bugzilla-link][3]).
 
 
 [1]: https://docs.getutm.app/guest-support/windows/#download
