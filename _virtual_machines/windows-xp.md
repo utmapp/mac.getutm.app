@@ -1,13 +1,13 @@
 ---
 title: Windows XP
-architecture: x64
+architecture: x86
 memory: 512 MiB
 disk: 20 GiB
 display: VGA
 spice_installed: true
 username:
 password:
-screenshot: windows-xp-x64.png
+screenshot: windows-xp-x86.png
 download: https://github.com/utmapp/vm-downloads/releases/download/windows-template/windows-xp-x64-utm.zip
 ---
 
@@ -25,8 +25,10 @@ You need an Windows XP installation ISO. There are many different ones that work
 8. Install the SPICE tools.
 
 ## Notes
-Due to the age of this operating system, Internet Explorer 6 will NOT work at loading most websites even if internet is working. You should download [Firefox 52 ESR][2], the last version to support Windows XP and use UTM's directory sharing feature to install it.
+* Due to the age of this operating system, Internet Explorer 6 will NOT work at loading most websites even if internet is working. You should download [Firefox 52 ESR][2], the last version to support Windows XP and use UTM's directory sharing feature to install it.
+* Installation of SPICE tools require 32-bit version of Windows XP and will not work on Windows XP 64-bit [3].
 
 
 [1]: https://docs.getutm.app/guest-support/windows/#download
 [2]: https://ftp.mozilla.org/pub/firefox/releases/52.9.0esr/win32/en-US/Firefox%20Setup%2052.9.0esr.exe
+[3]: https://bugs.freedesktop.org/show_bug.cgi?id=67228
