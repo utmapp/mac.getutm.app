@@ -14,7 +14,7 @@ utm_link: false
 ---
 Arch Linux ARM with the [Omarchy 4](https://omarchy.org) desktop: Hyprland
 0.56.1, quickshell as bar, menu, OSD and notification daemon, hyprlock,
-hypridle, uwsm and SDDM with autologin, plus the 441 `omarchy-*` commands.
+hypridle, uwsm and SDDM with autologin, plus the 442 `omarchy-*` commands.
 
 Omarchy has no aarch64 build — its package repository serves x86_64 only — so
 this rebuilds the desktop on Arch Linux ARM and applies the real contents of the
