@@ -18,8 +18,9 @@ hypridle, uwsm and SDDM with autologin, plus the 445 `omarchy-*` commands.
 
 Omarchy has no aarch64 build — its package repository serves x86_64 only — so
 this rebuilds the desktop on Arch Linux ARM and applies the real contents of the
-Omarchy tree. The 17 Omarchy tools that upstream does not publish for ARM are
-compiled from source, and OBS Studio and Pinta are included.
+Omarchy tree. The 18 packages that upstream does not publish for ARM are compiled
+from source — nine of them Omarchy's own, `herdr` included — and OBS Studio and
+Pinta are included.
 
 The image ships a neutral `us` keyboard layout, with Option acting as SUPER so
 Omarchy's shortcuts are reachable from a Mac keyboard.
@@ -33,8 +34,8 @@ Shared clipboard works in both directions with "Share clipboard" enabled and the
 VM open as a window. Shared folders work in both VirtFS and SPICE WebDAV modes:
 pick one in the VM settings and run `omarchy-arm-share` in the guest.
 
-There is no GPU acceleration inside the VM: rendering is software, so blur and
-shadows are off. The resolution is fixed at boot and editable in
+With software rendering, blur and shadows are off; turning the GPU on brings
+them back. The resolution is fixed at boot and editable in
 `~/.config/hypr/monitors.lua`.
 
 Change the password with `passwd` as soon as you log in. The build script that
