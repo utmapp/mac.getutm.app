@@ -23,7 +23,8 @@ from source — nine of them Omarchy's own, `herdr` included — and OBS Studio 
 Pinta are included.
 
 The image ships a neutral `us` keyboard layout, with Option acting as SUPER so
-Omarchy's shortcuts are reachable from a Mac keyboard.
+Omarchy's shortcuts are reachable from a Mac keyboard. The timezone is UTC;
+set yours with `sudo timedatectl set-timezone <zone>`.
 
 Rendering is software by default, because under UTM 4.7 GPU clients come up
 black. On UTM 5.0.x that is not the case: `omarchy-arm-gpu --on` switches to
