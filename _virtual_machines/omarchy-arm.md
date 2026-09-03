@@ -28,8 +28,9 @@ set yours with `sudo timedatectl set-timezone <zone>`.
 
 Rendering is software by default, because under UTM 4.7 GPU clients come up
 black. On UTM 5.0.x that is not the case: `omarchy-arm-gpu --on` switches to
-hardware GL, and `--off` goes back. `omarchy-arm-user` switches which account
-logs in automatically.
+hardware GL, and `--off` goes back. `omarchy-arm-display --retina` moves the
+desktop to 3840x2160 at scale 2 for a sharp panel, and `--default` goes back.
+`omarchy-arm-user` switches which account logs in automatically.
 
 Shared clipboard works in both directions with "Share clipboard" enabled and the
 VM open as a window. Shared folders work in both VirtFS and SPICE WebDAV modes:
