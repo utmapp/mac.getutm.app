@@ -34,6 +34,10 @@ goes back. `omarchy-arm-display --retina` moves the desktop to 3840x2400 at
 scale 2 for a sharp panel, and `--default` goes back. `omarchy-arm-user`
 switches which account logs in automatically.
 
+It is configured for 4 GiB and 4 vCPU. That is not a minimum: booted read-only,
+the desktop comes up clean on 1536 MiB, and at 1024 the OOM killer takes
+quickshell. Lower it in the VM settings if your Mac is tight.
+
 Shared clipboard works in both directions with "Share clipboard" enabled and the
 VM open as a window. Shared folders work in both VirtFS and SPICE WebDAV modes:
 pick one in the VM settings and run `omarchy-arm-share` in the guest.
