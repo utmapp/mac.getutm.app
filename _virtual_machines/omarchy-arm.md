@@ -1,9 +1,9 @@
 ---
 title: Omarchy 4 ARM64
 architecture: ARM64
-memory: 12 GiB
+memory: 4 GiB
 disk: 80 GiB
-display: VGA
+display: GPU Accelerated
 spice_installed: true
 username: omarchy
 password: omarchy
@@ -13,8 +13,8 @@ download: https://archive.org/details/omarchy-arm-utm
 utm_link: false
 ---
 Arch Linux ARM with the [Omarchy 4](https://omarchy.org) desktop: Hyprland
-0.56.1, quickshell as bar, menu, OSD and notification daemon, hyprlock,
-hypridle, uwsm and SDDM with autologin, plus the 445 `omarchy-*` commands.
+0.56.2, quickshell as bar, menu, OSD and notification daemon, hyprlock,
+hypridle, uwsm and SDDM with autologin, plus the 456 `omarchy-*` commands.
 
 Omarchy has no aarch64 build — its package repository serves x86_64 only — so
 this rebuilds the desktop on Arch Linux ARM and applies the real contents of the
@@ -26,11 +26,13 @@ The image ships a neutral `us` keyboard layout, with Option acting as SUPER so
 Omarchy's shortcuts are reachable from a Mac keyboard. The timezone is UTC;
 set yours with `sudo timedatectl set-timezone <zone>`.
 
-Rendering is software by default, because under UTM 4.7 GPU clients come up
-black. On UTM 5.0.x that is not the case: `omarchy-arm-gpu --on` switches to
-hardware GL, and `--off` goes back. `omarchy-arm-display --retina` moves the
-desktop to 3840x2160 at scale 2 for a sharp panel, and `--default` goes back.
-`omarchy-arm-user` switches which account logs in automatically.
+The VM is configured with the GPU-capable display device
+(`virtio-gpu-gl-pci`), but the desktop renders in software by default, because
+under UTM 4.7 GPU clients come up black. Two reports on UTM 5.0.x describe that
+bug as gone; `omarchy-arm-gpu --on` switches to hardware GL there, and `--off`
+goes back. `omarchy-arm-display --retina` moves the desktop to 3840x2400 at
+scale 2 for a sharp panel, and `--default` goes back. `omarchy-arm-user`
+switches which account logs in automatically.
 
 Shared clipboard works in both directions with "Share clipboard" enabled and the
 VM open as a window. Shared folders work in both VirtFS and SPICE WebDAV modes:
